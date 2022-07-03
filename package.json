@@ -1,0 +1,46 @@
+{
+  "name": "orpg-server",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "author": "Lucas Coelho",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "module-alias": "^2.2.2",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.12",
+    "redis": "^3.0.2",
+    "remove": "^0.1.5",
+    "uuid": "^8.3.1",
+    "ws": "^7.3.1"
+  },
+  "_moduleAliases": {
+    "enums": "dist/enums",
+    "handlers": "dist/handlers",
+    "types": "dist/types",
+    "database": "dist/database"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/mongodb": "^3.5.32",
+    "@types/mongoose": "^5.7.37",
+    "@types/node": "^14.14.6",
+    "@types/ws": "^7.2.9",
+    "@types/uuid": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2",
+    "ts-node-dev": "^1.0.0-pre.63",
+    "typescript": "^4.0.5"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsc && ts-node-dev src/index.ts",
+    "build": "tsc",
+    "db": "node src/scripts/setupDB.js",
+    "wipe": "node src/scripts/wipe.js"
+  }
+}
